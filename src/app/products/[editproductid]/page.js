@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function page(props) {
+export default function Page(props) {
   const router = useRouter();
   const [name, setName] = useState();
   const [company, setCompany] = useState();
