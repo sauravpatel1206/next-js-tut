@@ -10,13 +10,10 @@ export default function Page(props) {
   const [price, setPrice] = useState();
 
   const editProduct = async () => {
-    let result = await fetch(
-      `http://localhost:3000/api/products/${props.params.editproductid}`,
-      {
-        method: "PUT",
-        body: JSON.stringify({ name, company, price }),
-      }
-    );
+    let result = await fetch(`api/products/${props.params.editproductid}`, {
+      method: "PUT",
+      body: JSON.stringify({ name, company, price }),
+    });
     let res = await result.json();
     alert(res.result);
   };

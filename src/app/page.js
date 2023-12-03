@@ -9,7 +9,7 @@ const Page = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let result = await fetch("http://localhost:3000/api/products");
+        let result = await fetch("api/products");
         let res = await result.json();
         setData(res?.result || []);
       } catch (error) {

@@ -10,7 +10,7 @@ export default function Page() {
   const [price, setPrice] = useState();
 
   const addProduct = async () => {
-    let result = await fetch("http://localhost:3000/api/products", {
+    let result = await fetch("api/products", {
       method: "POST",
       body: JSON.stringify({ name, company, price }),
     });
@@ -18,7 +18,7 @@ export default function Page() {
     alert(res.result);
   };
   const editProduct = async () => {
-    let result = await fetch("http://localhost:3000/api/products", {
+    let result = await fetch("api/products", {
       method: "PUT",
       body: JSON.stringify({ name, company, price }),
     });
